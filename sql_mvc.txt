@@ -1,0 +1,65 @@
+CREATE DATABASE projetodigiliza;
+
+CREATE TABLE `table` (
+  id INT NOT NULL AUTO_INCREMENT,
+  description VARCHAR(50) NOT NULL,
+  PRIMARY KEY (id)
+);
+
+CREATE TABLE `user` (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(255) NOT NULL,
+  email VARCHAR(255) NOT NULL,
+  password VARCHAR(255) NOT NULL,
+  token VARCHAR(255) 
+);
+
+CREATE TABLE reservation (
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    table_id INT NOT NULL,
+    user_id INT NOT NULL,
+    date_initial DATETIME NOT NULL,
+    date_final DATETIME NOT NULL,
+    FOREIGN KEY (table_id) REFERENCES tables(id),
+    FOREIGN KEY (user_id) REFERENCES user(id)
+);
+
+INSERT INTO `reservation` (`id`, `table_id`, `user_id`, `date_initial`, `date_final`) VALUES
+(25, 16, 1, '2023-05-19 18:00:00', '2023-05-19 23:55:00'),
+(21, 17, 1, '2023-05-18 18:00:00', '2023-05-18 19:00:00'),
+(20, 16, 1, '2023-05-18 18:00:00', '2023-05-18 18:00:00'),
+(24, 16, 1, '2023-05-18 18:00:00', '2023-05-18 18:20:00');
+
+INSERT INTO `user` (name, email, password) VALUES
+('Marcelo', 'marcelo@hotmail.com', 2345),
+('Fernanda', 'fernanda@hotmail.com', 1212),
+('Cleber', 'cleber@hotmail.com', 3987),
+('Roberto', 'roberto@hotmail.com', 5555),
+('João', 'joao@hotmail.com', 4572);
+
+INSERT INTO `table` (description) VALUES
+('Mesa 01'),
+('Mesa 02'),
+('Mesa 03'),
+('Mesa 04'),
+('Mesa 05'),
+('Mesa 06'),
+('Mesa 07'),
+('Mesa 08'),
+('Mesa 09'),
+('Mesa 10'),
+('Mesa 11'),
+('Mesa 12'),
+('Mesa 13'),
+('Mesa 14'),
+('Mesa 15');
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,97 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 30px;
+    height: 100%;
+}
+
+d table tr:hover td {
+    background-color: #EEE;
+}
+
+table td.actions {
+    width: 10px;
+}
+
+.alertInfo {
+    margin-top: 25px !important;
+    position: absolute;
+    margin-left: 70%;
+    top: -10px !important;
+    padding: 10px;
+    background-color: #2196F3;
+    color: white;
+    opacity: 0.8
+}
+
+.alertSuccess {
+    margin-top: 25px !important;
+    position: absolute;
+    margin-left: 69.1%;
+    top: -10px !important;
+    padding: 10px;
+    background-color: #04AA6D;
+    color: white;
+    opacity: 0.8;
+    width: max-content;
+}
+
+.alertWarning {
+    margin-top: 25px !important;
+    position: absolute;
+    margin-left: 70%;
+    top: -10px !important;
+    padding: 10px;
+    background-color: #ff9800;
+    color: white;
+    opacity: 0.8;
+    width: -webkit-fill-available;
+    margin-right: 15px;
+}
+
+.alertDanger {
+    margin-top: 25px !important;
+    position: absolute;
+    margin-left: 70%;
+    top: -10px !important;
+    padding: 10px;
+    background-color: #f44336;
+    color: white;
+    opacity: 0.8
+}
+
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+
+.closebtn:hover {
+    color: black;
+}
+
+.footer {
+    background-color: #214761;
+    width: 100%;
+    color: #fff;
+    padding: 20px 50px 20px 50px;
+    padding-left: 20px;
+}
+
+
+footer {
+    position: absolute;
+    height: 7vh;
+    /* change accordingly to your wishes */
+    width: 100vw;
+    background-color: #214761;
+    width: 100%;
+    color: #fff;
+    padding: 20px 50px 20px 50px;
+    padding-left: 20px;
+}
