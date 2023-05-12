@@ -6,6 +6,9 @@ Ao descompactar, é necessário rodar o **composer** pra instalar as dependênci
 Vá até a pasta do projeto, pelo *prompt/terminal* e execute:
 > composer install
 
+Após instalar o composer, baixe o PHPUnit
+> composer require --dev phpunit/phpunit
+
 Depois é só aguardar.
 
 ## Configuração
