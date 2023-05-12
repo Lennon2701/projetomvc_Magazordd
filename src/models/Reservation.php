@@ -55,6 +55,13 @@ class Reservation extends Model
 
     public static function save($params) {
 
+        if($params['hour_final'] <= $params['hour_initial']) {
+            return [
+                'message' => 'Hora Inicial não pode ser maior que a Hora Final',
+                'response' => false
+            ];
+        }
+
         $params['newDate_initial'] = Reservation::formatDateHour($params['date_initial'], $params['hour_initial']);
         $params['newDate_final'] = Reservation::formatDateHour($params['date_initial'], $params['hour_final']);
 
