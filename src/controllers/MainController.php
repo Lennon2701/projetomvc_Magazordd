@@ -4,15 +4,15 @@ namespace src\controllers;
 
 use \core\Controller;
 use src\models\Reservation;
-use src\models\Table;
 
 class MainController extends Controller
 {
 
     public function index()
     {
-        $myReserves = Reservation::select()->where('user_id', $_SESSION['user_id'])->execute();
-        $allReserves = Reservation::select()->execute();
+        $reserves = new Reservation;
+        $myReserves = $reserves->list(['id' => $_SESSION['user_id']]);
+        $allReserves = $reserves->list();
 
         $this->render('main', [
             'myReserves' => $myReserves,

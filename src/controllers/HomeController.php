@@ -3,8 +3,6 @@
 namespace src\controllers;
 
 use \core\Controller;
-use src\models\Person;
-use src\models\Contact;
 use \src\handlers\UserHandler;
 
 class HomeController extends Controller
@@ -22,15 +20,4 @@ class HomeController extends Controller
             $this->redirect('/main');
         }
     }
-
-    public function index()
-    {
-        $person = Person::select()->execute();
-        $contact = Contact::select()->execute();
-
-        $this->render('home', [
-            'person' => $person,
-            'contact' => $contact
-        ]);
-    }
-}
+} 
